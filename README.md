@@ -2,8 +2,13 @@
 
 HydroHabit is an iOS 18 application designed to help users maintain optimal hydration levels. Unlike standard trackers, it uses intelligent scheduling to ensure reminders are healthy and non-intrusive.
 
-## 🚀 The Demo Mode
-To make it easy for anyone to see the app in action, I built a **One-Click Demo Engine**.
+## 🚀 Live Demo
+<p align="center">
+  <img src="./screenshots/demo.gif" width="300" alt="HydroHabit Demo">
+</p>
+
+### The One-Click Demo Engine
+To make it easy for anyone to see the app in action, I built a **One-Click Demo Engine**. 
 1. Open the app.
 2. Tap **"Try Demo Mode"**.
 3. Instantly see a populated dashboard with **15 days of historical data** (12 successful days, 3 failed days) and a pre-configured profile.
@@ -32,14 +37,13 @@ To make it easy for anyone to see the app in action, I built a **One-Click Demo 
 - **UI Framework:** SwiftUI
 - **Database:** SwiftData (iOS 18 persistence)
 - **Notifications:** UserNotifications Framework
-- **Architecture:** Clean Architecture (Ready for Cloud/Firebase migration)
 
-## 🏗 How It's Built (Architecture)
+## 🏗 Architecture (Cloud-Ready)
 
 The app is architected for scalability:
 - **Models:** Uses SwiftData `@Model` classes with `Relationship` mapping to link water entries to specific users.
 - **Managers:** A singleton `HydrationManager` handles the complex math of notification windowing and meal-time buffers.
-- **Views:** Modular SwiftUI views (e.g., `WaterGlassView`) that are decoupled from the data logic.
+- **Views:** Modular SwiftUI views decoupled from the data logic, making it easy to swap the local database for a Cloud API/Firebase later.
 
 ## ⚙️ Setup & Installation
 1. Clone the repository.
